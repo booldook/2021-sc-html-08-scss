@@ -28,6 +28,22 @@
 	margin: 0 auto;
 }
 
+@mixin shadow($x: 0, $y: 0, $b: 5px, $o: .5) {
+	box-shadow: $x $y $b rgba(0, 0, 0, $o)
+}
+
+@mixin shadow-light($x: 0, $y: 0, $b: 5px, $o: .5) {
+	box-shadow: $x $y $b rgba(255, 255, 255, $o)
+}
+
+@mixin text-shadow($x: 0, $y: 0, $b: 5px, $o: .5) {
+	text-shadow: $x $y $b rgba(0, 0, 0, $o)
+}
+
+@mixin text-shadow-light($x: 0, $y: 0, $b: 5px, $o: .5) {
+	text-shadow: $x $y $b rgba(255, 255, 255, $o)
+}
+
 @mixin bt-primary() {
 	background-color: $primary;
 	color: $light;
@@ -41,6 +57,53 @@
 	}
 }
 
+@mixin header-title($s: inherit, $c: inherit, $w: normal) {
+	font-size: $s;
+	color: $c;
+	font-weight: $w;
+	text-align: center;
+}
+
+@mixin link-hover($w: 2px, $c: $dark, $g: .5em, $s: 0.5s) {
+	&::after {
+		display: block;
+		content: "";
+		height: $w;
+		background-color: $c;
+		margin-top: $g;
+		transition: transform $s;
+		transform: scaleX(0);
+		transform-origin: right center;
+	}
+	&:hover {
+		&::after {
+			transform: scaleX(1);
+			transform-origin: left center;
+		}
+	}
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
 
 /************* 반응형 ***************/
 @mixin XL {

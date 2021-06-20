@@ -117,8 +117,26 @@ a:link, a:visited, a:hover, a:active {
   margin: 0 auto;
 }
 
-html, body {
+html {
   font-family: "Open Sans", sans-serif;
+}
+
+html body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html body::-webkit-scrollbar-thumb {
+  background: pink;
+}
+
+html body::-webkit-scrollbar-track {
+  background: red;
+}
+
+html body {
+  scrollbar-face-color: pink;
+  scrollbar-track-color: red;
 }
 
 header.header-wrapper {
@@ -193,6 +211,7 @@ header.header-wrapper .navi-wrap .navi:hover {
   text-align: center;
   color: #f1f1f1;
   font-size: 4vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   z-index: auto;
   position: absolute;
   top: 50%;
@@ -223,6 +242,7 @@ header.header-wrapper .navi-wrap .navi:hover {
 }
 
 .main-wrapper .title .bt-login {
+  text-shadow: none;
   background-color: #435da5;
   color: #f1f1f1;
   padding: .75em 1.25em;
@@ -246,8 +266,53 @@ header.header-wrapper .navi-wrap .navi:hover {
 }
 
 .pf-wrapper .title {
-  text-align: center;
   margin: 3em 0 2em 0;
+  font-size: 2rem;
+  color: inherit;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pf-wrapper .navi-cate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1em 0;
+}
+
+.pf-wrapper .navi-cate a {
+  padding: 1em 1.5em;
+}
+
+.pf-wrapper .navi-cate a::after {
+  display: block;
+  content: "";
+  height: 3px;
+  background-color: darkred;
+  margin-top: 0.325em;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+}
+
+.pf-wrapper .navi-cate a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
 .pf-wrapper .pf-wrap {

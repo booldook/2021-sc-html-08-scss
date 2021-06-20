@@ -4,8 +4,11 @@
 	@include wrapper($XL);
 }
 
-html, body {
+html {
 	font-family: $open;
+	body {
+		@include scrollbars(10px, pink, red);
+	}
 }
 
 header.header-wrapper {
@@ -49,6 +52,7 @@ header.header-wrapper {
 		text-align: $CT;
 		color: $light;
 		font-size: 4vw;
+		@include text-shadow($o: .7, $b: 10px);
 		@include center;
 		@include fx($CT, $CT);
 		@include fx-col;
@@ -56,6 +60,7 @@ header.header-wrapper {
 			font-size: 6vw;
 		}
 		.bt-login {
+			text-shadow: none;
 			@include bt-primary;
 			font-size: 1.25rem;
 			margin-top: 1em;
@@ -68,8 +73,19 @@ header.header-wrapper {
 
 .pf-wrapper {
 	.title {
-		text-align: center;
 		margin: 3em 0 2em 0;
+		// @include header-title;
+		// @include header-title(2rem);
+		// @include header-title(2rem, red, bold);
+		@include header-title($s: 2rem, $w: bold);
+	}
+	.navi-cate {
+		@include fx($CT);
+		margin: 1em 0;
+		a {
+			padding: 1em 1.5em;
+			@include link-hover($c: darkred, $g: .325em, $w: 3px);
+		}
 	}
 	.pf-wrap {
 		@include fx;
