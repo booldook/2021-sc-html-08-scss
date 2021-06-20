@@ -111,4 +111,61 @@ a:link, a:visited, a:hover, a:active {
 해당 요소 전체에 적용되는 가상선택자에는 콜론을 하나 : 붙인다. */
 /* flaot가 되면 블록상태가 없어지고 컨텐츠 크기만큼 줄어듬. */
 /* reset css 초기값을 배포해놓은 css가 존재함 노말라이즈 css 존재함 필요하면 다운로드해서 적용 */
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header.header-wrapper {
+  color: #f1f1f1;
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header.header-wrapper .logo {
+  font-size: 1rem;
+  padding: 1em;
+}
+
+header.header-wrapper .logo:hover {
+  background-color: #df5b3a;
+  color: #f1f1f1;
+}
+
+header.header-wrapper .navi-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header.header-wrapper .navi-wrap .navi {
+  padding: 1em;
+}
+
+header.header-wrapper .navi-wrap .navi:hover {
+  background-color: #f1f1f1;
+  color: #333;
+}
 /*# sourceMappingURL=index.css.map */

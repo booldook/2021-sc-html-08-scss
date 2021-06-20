@@ -1,2 +1,33 @@
 @import 'base';
 
+.wrapper {
+	@include wrapper($XL);
+}
+
+html, body {
+	font-family: $open;
+}
+
+header.header-wrapper {
+	color: $light;
+	background-color: $dark;
+	@include fx($SB);
+	.logo {
+		font-size: 1rem;
+		padding: 1em;
+		&:hover {
+			background-color: $danger;
+			color: $light;
+		}
+	}
+	.navi-wrap {
+		@include fx;
+		.navi {
+			padding: 1em;
+			&:hover {
+				background-color: $light;
+				color: $dark;
+			}
+		}
+	}
+}

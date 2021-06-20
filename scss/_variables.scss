@@ -1,6 +1,8 @@
-$colorPrimary: #435da5;
-$colorDanger: #df5b3a;
-$colorWarning: #29af3f;
+$primary: #435da5;
+$danger: #df5b3a;
+$warning: #29af3f;
+$dark: #333;
+$light: #f1f1f1;
 
 $XL: 1400px;
 $LG: 1200px;
@@ -10,3 +12,13 @@ $XS: 576px;
 
 $noto-kr: 'Noto Sans KR', sans-serif;
 $open: 'Open Sans', sans-serif;
+
+$FS: flex-start;
+$FE: flex-end;
+$ST: stretch;
+$SB: space-between;
+$SA: space-around;
+$SE: space-evenly;
+$CT: center;
+$LT: left;
+$RT: right;

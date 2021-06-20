@@ -1,1 +1,29 @@
 @import 'variables';
+
+@mixin fx($h: $FS, $v: $ST, $w: wrap) {
+	display: flex;
+	justify-content: $h;
+	align-items: $v;
+	flex-wrap: $w;
+}
+
+@mixin fx-wrap($w: wrap) {
+	flex-wrap: $w;
+}
+
+@mixin fx-col {
+	flex-direction: column;
+}
+
+@mixin center($z: auto) {
+	z-index: $z;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin wrapper($w: $LG) {
+	max-width: $w;
+	margin: 0 auto;
+}
