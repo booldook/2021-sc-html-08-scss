@@ -24,9 +24,66 @@ header.header-wrapper {
 		@include fx;
 		.navi {
 			padding: 1em;
+			&.mo-navi {
+				display: none;
+			}
+			@include MD {
+				display: none;
+				&.mo-navi {
+					display: block;
+				}
+			}
 			&:hover {
 				background-color: $light;
 				color: $dark;
+			}
+		}
+	}
+}
+
+.main-wrapper {
+	max-height: calc(100vh - 50px);
+	position: relative;
+	overflow: hidden;
+	.title {
+		text-align: $CT;
+		color: $light;
+		font-size: 4vw;
+		@include center;
+		@include fx($CT, $CT);
+		@include fx-col;
+		@include SM {
+			font-size: 6vw;
+		}
+		.bt-login {
+			@include bt-primary;
+			font-size: 1.25rem;
+			margin-top: 1em;
+			@include SM {
+				font-size: .875rem;
+			}
+		}
+	}
+}
+
+.pf-wrapper {
+	.title {
+		text-align: center;
+		margin: 3em 0 2em 0;
+	}
+	.pf-wrap {
+		@include fx;
+		.pf {
+			width: 23%;
+			margin: 1%;
+			@include MD {
+				width: 31.3333%;
+			}
+			@include SM {
+				width: 48%;
+			}
+			@include XS {
+				width: 98%;
 			}
 		}
 	}

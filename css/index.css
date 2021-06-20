@@ -44,6 +44,7 @@ https://docs.google.com/spreadsheets/d/1sQQmSalRUcPXFz8uJodAcxrad_19oHAlvCSj35VV
 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+/************* 반응형 ***************/
 html, body, h1, h2, h3, h4, h5, h6, p, div, header, footer, section, aside, article, ul, ol, li, dl, dd, dt {
   margin: 0;
   padding: 0;
@@ -164,8 +165,125 @@ header.header-wrapper .navi-wrap .navi {
   padding: 1em;
 }
 
+header.header-wrapper .navi-wrap .navi.mo-navi {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  header.header-wrapper .navi-wrap .navi {
+    display: none;
+  }
+  header.header-wrapper .navi-wrap .navi.mo-navi {
+    display: block;
+  }
+}
+
 header.header-wrapper .navi-wrap .navi:hover {
   background-color: #f1f1f1;
   color: #333;
+}
+
+.main-wrapper {
+  max-height: calc(100vh - 50px);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-wrapper .title {
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 4vw;
+  z-index: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper .title {
+    font-size: 6vw;
+  }
+}
+
+.main-wrapper .title .bt-login {
+  background-color: #435da5;
+  color: #f1f1f1;
+  padding: .75em 1.25em;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  font-size: 1.25rem;
+  margin-top: 1em;
+}
+
+.main-wrapper .title .bt-login:hover {
+  background-color: #c2d0f3;
+  color: #333a4b;
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper .title .bt-login {
+    font-size: .875rem;
+  }
+}
+
+.pf-wrapper .title {
+  text-align: center;
+  margin: 3em 0 2em 0;
+}
+
+.pf-wrapper .pf-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pf-wrapper .pf-wrap .pf {
+  width: 23%;
+  margin: 1%;
+}
+
+@media screen and (max-width: 992px) {
+  .pf-wrapper .pf-wrap .pf {
+    width: 31.3333%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pf-wrapper .pf-wrap .pf {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pf-wrapper .pf-wrap .pf {
+    width: 98%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

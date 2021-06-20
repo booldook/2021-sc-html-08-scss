@@ -27,3 +27,48 @@
 	max-width: $w;
 	margin: 0 auto;
 }
+
+@mixin bt-primary() {
+	background-color: $primary;
+	color: $light;
+	padding: .75em 1.25em;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: all .5s;
+	&:hover {
+		background-color: $primary-light;
+		color: $primary-dark;
+	}
+}
+
+
+/************* 반응형 ***************/
+@mixin XL {
+	@media screen and (max-width: $XL){
+		@content;
+	}
+}
+
+@mixin LG {
+	@media screen and (max-width: $LG){
+		@content;
+	}
+}
+
+@mixin MD {
+	@media screen and (max-width: $MD){
+		@content;
+	}
+}
+
+@mixin SM {
+	@media screen and (max-width: $SM){
+		@content;
+	}
+}
+
+@mixin XS {
+	@media screen and (max-width: $XS){
+		@content;
+	}
+}
